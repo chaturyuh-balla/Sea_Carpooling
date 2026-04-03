@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
-
+import BASE_URL from "../api";
 function SearchRide(){
 
 const [startLocation,setStartLocation] = useState("");
@@ -14,7 +14,7 @@ const searchRide = async ()=>{
 try{
 
 const res = await axios.get(
-`http://localhost:8080/rides/search?startLocation=${startLocation}&destination=${destination}`
+`${BASE_URL}/rides/search?startLocation=${startLocation}&destination=${destination}`
 );
 
 navigate("/results",{state:{rides:res.data}});

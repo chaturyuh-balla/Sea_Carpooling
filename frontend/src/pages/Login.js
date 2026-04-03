@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
 import { Link } from "react-router-dom";
+import BASE_URL from "../api";
 function Login(){
 
 const navigate = useNavigate();
@@ -18,7 +19,7 @@ setUser({...user,[e.target.name]:e.target.value});
 const login = async ()=>{
 
 const res = await axios.post(
-"http://localhost:8080/auth/login",
+`${BASE_URL}/auth/login`,
 user
 );
 

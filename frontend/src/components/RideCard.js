@@ -1,12 +1,13 @@
 import React from "react";
 import axios from "axios";
+import BASE_URL from "../api";
 
 function RideCard({ride}) {
 
   const joinRide = async () => {
 
     await axios.post(
-      "http://localhost:8080/bookings",
+      `${BASE_URL}/bookings`,
       {
         ride_id: ride.ride_id,
         user_id: 1

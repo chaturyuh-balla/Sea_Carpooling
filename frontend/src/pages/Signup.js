@@ -1,5 +1,6 @@
 import React,{useState} from "react";
 import axios from "axios";
+import BASE_URL from "../api";
 
 function Signup(){
 
@@ -17,7 +18,7 @@ setUser({...user,[e.target.name]:e.target.value});
 const signup=async()=>{
 
 await axios.post(
-"http://localhost:8080/auth/signup",
+`${BASE_URL}/auth/signup`,
 user
 );
 

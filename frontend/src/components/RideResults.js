@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {useLocation} from "react-router-dom";
 import axios from "axios";
+import BASE_URL from "../api";
 
 function RideResults(){
 
@@ -13,7 +14,7 @@ const joinRide = async (rideId) => {
 
 try{
 
-await axios.put(`http://localhost:8080/rides/join/${rideId}`);
+await axios.put(`${BASE_URL}/rides/join/${rideId}`);
 
 alert("Ride Joined Successfully");
 

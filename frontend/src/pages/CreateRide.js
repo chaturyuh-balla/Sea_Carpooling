@@ -1,5 +1,6 @@
 import React,{useState} from "react";
 import axios from "axios";
+import BASE_URL from "../api";
 
 function CreateRide(){
 
@@ -23,7 +24,7 @@ const createRide=async()=>{
 try{
 
 await axios.post(
-"http://localhost:8080/rides",
+`${BASE_URL}/rides`,
 ride
 );
 
