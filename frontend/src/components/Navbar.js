@@ -41,19 +41,6 @@ SEA
 </div>
 
 
-{/* CENTER */}
-<div className="tagline">
-
-<div className="tagline-main">
-Safe • Easy • Affordable
-</div>
-
-<div className="tagline-sub">
-a carpooling system
-</div>
-
-</div>
-
 
 {/* RIGHT */}
 
